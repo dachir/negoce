@@ -1,0 +1,7 @@
+## Negoce
+
+Negoce
+
+#### License
+
+MIT

@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include negoce *.css
+recursive-include negoce *.csv
+recursive-include negoce *.html
+recursive-include negoce *.ico
+recursive-include negoce *.js
+recursive-include negoce *.json
+recursive-include negoce *.md
+recursive-include negoce *.png
+recursive-include negoce *.py
+recursive-include negoce *.svg
+recursive-include negoce *.txt
+recursive-exclude negoce *.pyc
