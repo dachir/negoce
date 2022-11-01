@@ -185,3 +185,9 @@ app_license = "MIT"
 # auth_hooks = [
 #	"negoce.auth.validate"
 # ]
+
+fixtures = [
+    "Custom Field",
+    "Client Script",
+    {"dt": "Server Script", "filters": [["disabled", "=", 0]]},
+]
