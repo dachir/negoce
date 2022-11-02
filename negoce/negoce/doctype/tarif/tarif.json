@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-TAR-{MM}-{#####}",
+ "creation": "2022-11-01 16:15:10.302573",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "debut",
+  "currency",
+  "item_group",
+  "column_break_3",
+  "fin",
+  "exchange_rate",
+  "amended_from",
+  "section_break_7",
+  "tarif_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "debut",
+   "fieldtype": "Date",
+   "label": "Debut"
+  },
+  {
+   "fieldname": "fin",
+   "fieldtype": "Date",
+   "label": "Fin"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tarif",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "tarif_details",
+   "fieldtype": "Table",
+   "label": "Tarif Details",
+   "options": "Tarif Details"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Categorie",
+   "options": "Item Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-02 11:58:50.819501",
+ "modified_by": "Administrator",
+ "module": "Negoce",
+ "name": "Tarif",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

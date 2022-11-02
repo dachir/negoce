@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2022-11-01 16:18:04.869083",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code_tarif",
+  "item",
+  "volume_min",
+  "volume_max",
+  "type_calcul",
+  "tarif"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "volume_min",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Volume Min",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "volume_max",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Volume Max",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tarif",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Tarif",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code_tarif",
+   "fieldtype": "Data",
+   "label": "Code Tarif",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Valeur",
+   "fieldname": "type_calcul",
+   "fieldtype": "Select",
+   "label": "Type Calcul",
+   "options": "Valeur\nPourcentage(%)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-02 11:47:00.311778",
+ "modified_by": "Administrator",
+ "module": "Negoce",
+ "name": "Tarif Details",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-ACT-{MM}-{#####}",
+ "creation": "2022-11-01 15:09:26.927480",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "arrivee_prevue",
+  "arrivee_effective",
+  "column_break_3",
+  "depart_prevu",
+  "depart_effectif",
+  "amended_from",
+  "details_client_section",
+  "client",
+  "tarif_code",
+  "tarif",
+  "column_break_9",
+  "navire",
+  "nom",
+  "volume",
+  "section_break_9",
+  "feuille_activite_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "navire",
+   "fieldtype": "Link",
+   "label": "Navire",
+   "options": "Navire"
+  },
+  {
+   "fetch_from": "navire.volume",
+   "fieldname": "volume",
+   "fieldtype": "Data",
+   "label": "Volume",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tarif",
+   "fieldtype": "Data",
+   "label": "Tarif",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Feuille Activite",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "navire.nom",
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "label": "Nom",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "feuille_activite_details",
+   "fieldtype": "Table",
+   "label": "Feuille Activite Details",
+   "options": "Feuille Activite Details"
+  },
+  {
+   "fieldname": "arrivee_prevue",
+   "fieldtype": "Datetime",
+   "label": "Arrivee Prevue"
+  },
+  {
+   "fieldname": "arrivee_effective",
+   "fieldtype": "Datetime",
+   "label": "Arrivee effective"
+  },
+  {
+   "fieldname": "depart_prevu",
+   "fieldtype": "Datetime",
+   "label": "Depart Prevu"
+  },
+  {
+   "fieldname": "depart_effectif",
+   "fieldtype": "Datetime",
+   "label": "Depart Effectif"
+  },
+  {
+   "fieldname": "details_client_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9tails Client"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tarif_code",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Tarif",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-02 14:37:42.071168",
+ "modified_by": "Administrator",
+ "module": "Negoce",
+ "name": "Feuille Activite",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
