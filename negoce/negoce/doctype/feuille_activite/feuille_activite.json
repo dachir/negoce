@@ -7,6 +7,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "posting_date",
+  "column_break_2",
+  "taxable",
+  "section_break_4",
   "arrivee_prevue",
   "arrivee_effective",
   "column_break_3",
@@ -14,22 +18,27 @@
   "depart_effectif",
   "amended_from",
   "details_client_section",
-  "client",
-  "tarif_code",
-  "tarif",
-  "column_break_9",
   "navire",
   "nom",
   "volume",
+  "currency",
+  "column_break_9",
+  "client",
+  "tarif_code",
+  "tarif",
+  "exchange_rate",
   "section_break_9",
-  "feuille_activite_details"
+  "feuille_activite_details",
+  "tarif_currency"
  ],
  "fields": [
   {
    "fieldname": "client",
    "fieldtype": "Link",
    "label": "Client",
-   "options": "Customer"
+   "options": "Customer",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_3",
@@ -39,7 +48,8 @@
    "fieldname": "navire",
    "fieldtype": "Link",
    "label": "Navire",
-   "options": "Navire"
+   "options": "Navire",
+   "reqd": 1
   },
   {
    "fetch_from": "navire.volume",
@@ -83,7 +93,9 @@
   {
    "fieldname": "arrivee_prevue",
    "fieldtype": "Datetime",
-   "label": "Arrivee Prevue"
+   "in_list_view": 1,
+   "label": "Arrivee Prevue",
+   "reqd": 1
   },
   {
    "fieldname": "arrivee_effective",
@@ -93,7 +105,9 @@
   {
    "fieldname": "depart_prevu",
    "fieldtype": "Datetime",
-   "label": "Depart Prevu"
+   "in_list_view": 1,
+   "label": "Depart Prevu",
+   "reqd": 1
   },
   {
    "fieldname": "depart_effectif",
@@ -114,12 +128,49 @@
    "fieldtype": "Data",
    "label": "N\u00b0 Tarif",
    "read_only": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "taxable",
+   "fieldtype": "Check",
+   "label": "Taxable"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tarif_currency",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Tarif Currency"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-11-02 14:37:42.071168",
+ "modified": "2022-11-07 08:03:16.036100",
  "modified_by": "Administrator",
  "module": "Negoce",
  "name": "Feuille Activite",
@@ -141,5 +192,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

@@ -12,7 +12,12 @@
   "longueur",
   "largeur",
   "tirant_eau",
-  "volume"
+  "volume",
+  "column_break_7",
+  "customer",
+  "customer_group",
+  "customer_type",
+  "territory"
  ],
  "fields": [
   {
@@ -55,11 +60,43 @@
    "fieldtype": "Int",
    "label": "Volume",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_group",
+   "fieldname": "customer_group",
+   "fieldtype": "Data",
+   "label": "Customer Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_type",
+   "fieldname": "customer_type",
+   "fieldtype": "Data",
+   "label": "Customer Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.territory",
+   "fieldname": "territory",
+   "fieldtype": "Data",
+   "label": "Territory",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-02 12:49:23.056610",
+ "modified": "2022-11-07 08:44:37.625579",
  "modified_by": "Administrator",
  "module": "Negoce",
  "name": "Navire",
@@ -82,5 +119,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "nom"
+ "title_field": "nom",
+ "track_changes": 1
 }
