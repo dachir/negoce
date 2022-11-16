@@ -190,4 +190,5 @@ fixtures = [
     "Custom Field",
     "Client Script",
     {"dt": "Server Script", "filters": [["disabled", "=", 0]]},
+    "Print Format",
 ]
