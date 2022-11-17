@@ -7,7 +7,7 @@ from frappe.model.document import Document
 class FeuilleActiviteDetails(Document):
 	
 	def before_save(self):
-		frappe.msgprint("ok")
+		#frappe.msgprint("ok")
 		if not self.user_creation:
 			self.user_creation = frappe.session.user
 			self.date_creation = frappe.utils.now()
