@@ -51,7 +51,17 @@ class FeuilleActivite(Document):
 
 	@frappe.whitelist()
 	def on_navire_change(self):
-		tarifs =frappe.db.get_list('Tarif Details', filters={'volume_min': ['<=', self.volume],'volume_max': ['>=', self.volume],},fields=['code_tarif','tarif','parent'],limit=1,)
+		#tarifs =frappe.db.get_list('Tarif Details', filters={'volume_min': ['<=', self.volume],'volume_max': ['>=', self.volume],},fields=['code_tarif','tarif','parent'],limit=1,)
+		tarifs = frappe.db.sql(
+					"""
+						select code_tarif,tarif,parent 
+					   	from `tabTarif Details`
+					   	where volume_min <= %(volume)s  and volume_max >= %(volume)s
+					""",
+					{ "volume":self.volume, },
+					as_dict =True,
+				)
+
 		if len(tarifs) > 0 :
 			for t in tarifs:
 				self.tarif_code = t.code_tarif

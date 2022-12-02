@@ -72,7 +72,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-11-02 11:58:50.819501",
+ "modified": "2022-12-02 09:48:16.716399",
  "modified_by": "Administrator",
  "module": "Negoce",
  "name": "Tarif",
@@ -90,6 +90,28 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tarif Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tarif User",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",
