@@ -14,7 +14,16 @@ class FeuilleActivite(Document):
 		
 
 	def on_submit(self):
-		items = frappe.get_list('Feuille Activite Details', filters={'parent': self.name}, fields=["item","warehouse","machine","quantite","date_action","prix"])
+		items = frappe.db.sql(
+					"""
+						select item,warehouse,machine,quantite,date_action,prix
+					   	from `tabFeuille Activite Details`
+					   	where parent = %(name)s 
+					""",
+					{ "name":self.name, },
+					as_dict =True,
+				)
+		#items = frappe.get_list('Feuille Activite Details', filters={'parent': self.name}, fields=["item","warehouse","machine","quantite","date_action","prix"])
 		#frappe.msgprint(str(items))
 		invoice_details = []
 		
