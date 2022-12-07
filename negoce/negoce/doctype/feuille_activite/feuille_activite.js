@@ -102,6 +102,13 @@ frappe.ui.form.on('Feuille Activite Details', {
 	}
 });
 
+frappe.ui.form.on("Feuille Activite","onload", function(frm, cdt, cdn) { 
+	var df = frappe.meta.get_docfield("Feuille Activite Details","prix", cur_frm.doc.name);
+    df.hidden = 1;
+	df = frappe.meta.get_docfield("Feuille Activite Details","montant", cur_frm.doc.name);
+    df.hidden = 1;
+});
+
 function open_form(frm, doctype, child_doctype, parentfield) {
 	frappe.model.with_doctype(doctype, () => {
 		let new_doc = frappe.model.get_new_doc(doctype);
@@ -118,4 +125,6 @@ function open_form(frm, doctype, child_doctype, parentfield) {
 		frappe.ui.form.make_quick_entry(doctype, null, null, new_doc);
 	});
 
-}
+};
+
+

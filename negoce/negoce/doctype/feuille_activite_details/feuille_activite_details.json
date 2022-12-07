@@ -70,33 +70,38 @@
   {
    "fieldname": "type_calcul",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Type Calcul"
   },
   {
    "fieldname": "user_creation",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "User Creation"
   },
   {
    "fieldname": "date_creation",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Date Creation"
   },
   {
    "fieldname": "user_modification",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "User Modification"
   },
   {
    "fieldname": "date_modification",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Date Modification"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-11-07 10:44:28.552430",
+ "modified": "2022-12-07 08:00:43.122659",
  "modified_by": "Administrator",
  "module": "Negoce",
  "name": "Feuille Activite Details",
