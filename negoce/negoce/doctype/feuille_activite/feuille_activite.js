@@ -10,7 +10,7 @@ const on_item_row_change = (frm,row) =>{
 		callback: function (r) {
 			if(r.message.item_group == "Services") row.prix = frm.doc.tarif / frm.doc.exchange_rate;
 			else {
-				if(r.message.type_calcul == 'Valeur') row.prix = frm.doc.tarif / frm.doc.exchange_rate;
+				if(r.message.type_calcul == 'Valeur') row.prix = r.message.tarif / frm.doc.exchange_rate;
 				else row.prix = (frm.doc.tarif * r.message.tarif / 100) / frm.doc.exchange_rate;
 			}
 			row.montant = row.quantite * row.prix;
