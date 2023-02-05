@@ -75,9 +75,10 @@ class FeuilleActivite(Document):
 			for t in tarifs:
 				self.tarif_code = t.code_tarif
 				self.tarif = t.tarif
-
+				
 				if self.volume > 100000 :
-					self.tarif = t.tarif + ((self.volume - 100000)/10 * 0.98)
+					self.tarif = self.tarif + (((self.volume - 100000)/10) * 0.098)
+					#frappe.msgprint(str(self.volume - 100000)/10)
 
 				tarif_doc = frappe.get_doc("Tarif", t.parent)
 				self.tarif_currency = tarif_doc.currency
